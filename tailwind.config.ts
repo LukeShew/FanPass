@@ -1,0 +1,30 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        fanpass: {
+          blue: "#2563EB",
+          navy: "#0F172A",
+          gray: "#F8FAFC",
+          border: "#E2E8F0"
+        }
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+      },
+      boxShadow: {
+        soft: "0 22px 70px rgba(15, 23, 42, 0.10)"
+      }
+    }
+  },
+  plugins: []
+};
+
+export default config;
