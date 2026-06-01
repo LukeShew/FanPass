@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { WaitlistForm } from "@/components/waitlist-form";
-import fanpassLogo from "@/Refreshed logos/fanpass-full-color-horizontal.png";
+import fanpassLogo from "@/Refreshed logos/fanpass-full-color-horizontal-cropped.png";
 
 const problemCards = [
   {
@@ -165,7 +165,11 @@ function Logo({
         src={fanpassLogo}
         alt="FanPass"
         priority={priority}
-        className={size === "small" ? "h-8 w-auto" : "h-10 w-auto"}
+        className={
+          size === "small"
+            ? "h-8 w-auto rounded-sm"
+            : "h-11 w-auto rounded-sm"
+        }
       />
     </div>
   );
