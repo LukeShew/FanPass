@@ -7,12 +7,16 @@ export type AudienceKey = "organizers" | "parents" | "coaches";
 
 type AudienceContent = {
   label: string;
+  ctaLabel: string;
   eyebrow: string;
   title: string;
   description: string;
+  benefitsTitle: string;
+  benefitsIntro: string;
   role: WaitlistRole;
   source: string;
   mockup: AudienceKey;
+  quickBenefits: string[];
   reasons: {
     title: string;
     body: string;
@@ -26,25 +30,34 @@ type AudienceContent = {
 export const audienceContent: Record<AudienceKey, AudienceContent> = {
   organizers: {
     label: "Tournament Director / Organizer",
+    ctaLabel: "Join as Director",
     eyebrow: "Built for tournament directors",
-    title: "Run admissions without guessing what happened at the gate.",
+    title: "Streamline admissions and boost gate revenue.",
     description:
-      "FanPass gives tournament directors a cleaner way to sell passes, check people in, and see admission activity while the event is still moving.",
+      "FanPass gives tournament managers one place to sell passes, check guests in, and track admission activity while the tournament is still moving.",
+    benefitsTitle: "Know exactly what is happening at every entrance.",
+    benefitsIntro:
+      "FanPass is built to replace paper lists, scattered payment screenshots, and end-of-day revenue guesswork with a live admissions workflow.",
     role: "Tournament Director / Organizer",
     source: "website-organizers",
     mockup: "organizers",
+    quickBenefits: [
+      "Live gate dashboard for pass sales and check-ins",
+      "Cleaner revenue totals without spreadsheet cleanup",
+      "Fewer disputes over who paid or entered"
+    ],
     reasons: [
       {
-        title: "See gate activity live",
-        body: "Track revenue, pass sales, and check-ins from one place instead of piecing it together after the event."
+        title: "Reduce entry wait times",
+        body: "Give gate staff a direct check-in flow so families are not stuck while someone searches for a list, receipt, or payment screenshot."
       },
       {
-        title: "Speed up entry",
-        body: "Give staff a simple check-in flow so families are not stuck while someone sorts out payment."
+        title: "Get automatic revenue reports",
+        body: "Track pass sales, check-ins, and gate activity in one dashboard instead of counting cash, wristbands, and notes after the tournament."
       },
       {
-        title: "Reduce manual cleanup",
-        body: "Replace wristband counts, screenshots, and loose cash notes with a cleaner admission record."
+        title: "Settle entry questions faster",
+        body: "Keep a cleaner record of who bought, who checked in, and what pass they used so staff can resolve gate disputes quickly."
       }
     ],
     stats: [
@@ -55,25 +68,34 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
   },
   parents: {
     label: "Parent / Spectator",
+    ctaLabel: "Join as Parent",
     eyebrow: "Built for families",
     title: "Get through the gate faster and get back to the game.",
     description:
-      "FanPass is built so parents and spectators can buy or show a pass quickly without hunting for cash, screenshots, or the right person at the gate.",
+      "FanPass helps families buy, save, and show passes without hunting for cash, payment screenshots, or the right person at the gate.",
+    benefitsTitle: "Keep tournament entry simple for the whole family.",
+    benefitsIntro:
+      "Parents care about convenience, savings, and getting to the court or field on time. FanPass keeps the pass flow easy before and during the event.",
     role: "Parent / Spectator",
     source: "website-parents",
     mockup: "parents",
+    quickBenefits: [
+      "Save passes in one place before arriving",
+      "Avoid cash lines and payment confusion",
+      "Share pass details with relatives when needed"
+    ],
     reasons: [
       {
-        title: "Keep passes easy to find",
-        body: "Use one clear pass instead of digging through texts, payment apps, or paper wristbands."
+        title: "Buy once and keep the pass ready",
+        body: "Store day, weekend, or family passes in one place so entry is not buried in a text thread or payment app."
       },
       {
-        title: "Spend less time in line",
-        body: "Show the pass, get checked in, and move on without a long payment conversation."
+        title: "Avoid cash lines",
+        body: "Use a digital pass at the gate instead of waiting while families sort out cash, Venmo screenshots, or wristbands."
       },
       {
-        title: "Know what you bought",
-        body: "Weekend, day, and family passes can be shown clearly before arriving at the gate."
+        title: "Make family entry easier",
+        body: "Keep pass details clear for parents, grandparents, or relatives who need to enter without another back-and-forth at the gate."
       }
     ],
     stats: [
@@ -84,25 +106,34 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
   },
   coaches: {
     label: "Coach",
+    ctaLabel: "Join as Coach",
     eyebrow: "Built for coaches",
-    title: "Keep team entry organized before the first whistle.",
+    title: "Organize team entry before the first whistle.",
     description:
-      "FanPass helps coaches understand who is ready for event access, where passes stand, and what still needs attention before the team arrives.",
+      "FanPass helps coaches see who is ready for event access, which families still need passes, and what needs attention before the team arrives.",
+    benefitsTitle: "Handle pass status before it turns into gate chaos.",
+    benefitsIntro:
+      "Coaches should not spend tournament mornings answering the same admission questions. FanPass gives teams a clearer way to coordinate access.",
     role: "Coach",
     source: "website-coaches",
     mockup: "coaches",
+    quickBenefits: [
+      "Track player, coach, and family pass status",
+      "Send reminders before tournament day",
+      "Coordinate faster with gate staff and organizers"
+    ],
     reasons: [
       {
-        title: "Know who is ready",
-        body: "See which players, coaches, and families have passes before the team hits the gate."
+        title: "Reduce admin work",
+        body: "Import or organize your roster, see who is ready, and spend less time chasing families for pass questions."
       },
       {
-        title: "Cut down on back-and-forth",
-        body: "Give families a cleaner pass flow instead of answering the same admission questions all weekend."
+        title: "Improve family communication",
+        body: "Give parents a clearer pass path and send reminders before arrival instead of answering the same admission questions all weekend."
       },
       {
-        title: "Coordinate with organizers",
-        body: "Keep team access clearer for the people running admissions and the people arriving together."
+        title: "Coordinate with tournament staff",
+        body: "Help organizers understand team access status so gate staff can move teams through without last-minute confusion."
       }
     ],
     stats: [
@@ -121,7 +152,7 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
       <SiteHeader />
 
       <section className="bg-fanpass-gray">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-16">
           <div>
             <p className="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-3 py-1 text-sm font-semibold text-fanpass-blue">
               {content.eyebrow}
@@ -132,12 +163,20 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
             <p className="mt-5 text-lg leading-8 text-slate-600">
               {content.description}
             </p>
+            <ul className="mt-6 grid gap-2 text-sm font-semibold text-fanpass-navy">
+              {content.quickBenefits.map((benefit) => (
+                <li key={benefit} className="flex gap-2">
+                  <span className="text-fanpass-blue">✓</span>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="#waitlist"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-fanpass-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
               >
-                Join as {content.label}
+                {content.ctaLabel}
               </Link>
               <Link
                 href="/"
@@ -170,13 +209,35 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
         </div>
       </section>
 
+      <section className="bg-white px-5 py-10">
+        <div className="mx-auto grid max-w-6xl gap-6 rounded-lg border border-fanpass-border bg-fanpass-gray p-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
+              Early access
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-fanpass-navy">
+              {content.benefitsTitle}
+            </h2>
+            <p className="mt-3 max-w-3xl leading-7 text-slate-600">
+              {content.benefitsIntro}
+            </p>
+          </div>
+          <Link
+            href="#waitlist"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-fanpass-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
+          >
+            Join the waitlist
+          </Link>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
             Why it matters
           </p>
           <h2 className="mt-3 text-3xl font-bold text-fanpass-navy">
-            FanPass is shaped around this job, not a generic signup page.
+            {content.benefitsTitle}
           </h2>
         </div>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -207,6 +268,14 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
               This signs you up under the right audience so FanPass can send
               updates that match how you would use the product.
             </p>
+            <ul className="mt-6 grid gap-3 text-sm font-semibold text-white">
+              {content.quickBenefits.map((benefit) => (
+                <li key={benefit} className="flex gap-2">
+                  <span className="text-blue-300">✓</span>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <WaitlistForm
             key={content.role}

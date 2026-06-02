@@ -7,7 +7,7 @@ FanPass is currently a role-based waitlist website for a youth sports tournament
 ## What Works
 
 - Role-first homepage with a concise hero, centered header navigation, contact email shortcut, refined audience card copy for each role, aligned card text/buttons, bold role buttons, and progressive disclosure
-- Dedicated audience pages for tournament directors, parents/spectators, and coaches
+- Dedicated audience pages for tournament directors, parents/spectators, and coaches with role-specific benefits, mockups, and stronger signup prompts
 - Waitlist form with default and locked role support
 - Audience-specific waitlist source values
 - Email validation

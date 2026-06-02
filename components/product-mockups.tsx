@@ -18,19 +18,19 @@ function OrganizerDashboardMockup() {
       <div className="mb-4 flex items-center justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-fanpass-blue">
-            Live admissions
+            Gate dashboard
           </p>
           <h3 className="mt-1 text-xl font-bold text-fanpass-navy">
-            Saturday Gate
+            North Entrance
           </h3>
         </div>
         <div className="rounded-md bg-emerald-50 px-3 py-1 text-sm font-bold text-emerald-700">
-          Open
+          Live
         </div>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <Metric label="Revenue" value="$8,420" />
+        <Metric label="Today's revenue" value="$8,420" />
         <Metric label="Checked in" value="612" />
         <Metric label="Passes sold" value="738" />
       </div>
@@ -53,12 +53,19 @@ function OrganizerDashboardMockup() {
         </div>
 
         <div className="rounded-lg border border-fanpass-border p-4">
-          <p className="mb-3 font-bold text-fanpass-navy">Recent check-ins</p>
-          <CheckInRow name="Weekend family pass" time="9:42 AM" />
-          <CheckInRow name="Adult day pass" time="9:39 AM" />
-          <CheckInRow name="Coach pass" time="9:37 AM" />
-          <CheckInRow name="Weekend family pass" time="9:35 AM" />
+          <p className="mb-3 font-bold text-fanpass-navy">Gate lanes</p>
+          <CheckInRow name="North Gate" time="284 checked in" />
+          <CheckInRow name="South Gate" time="196 checked in" />
+          <CheckInRow name="Court 4 Entry" time="132 checked in" />
+          <CheckInRow name="Manual reviews" time="8 pending" />
         </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-fanpass-border p-4">
+        <p className="mb-3 font-bold text-fanpass-navy">Recent sales</p>
+        <CheckInRow name="Weekend family pass" time="$45.00" />
+        <CheckInRow name="Adult day pass" time="$18.00" />
+        <CheckInRow name="Team coach pass" time="$0.00" />
       </div>
     </div>
   );
@@ -75,7 +82,7 @@ function ParentPassMockup() {
           </div>
           <div className="rounded-lg bg-fanpass-blue p-4 text-white">
             <p className="text-sm font-semibold text-blue-100">Weekend Pass</p>
-            <h3 className="mt-1 text-2xl font-bold">John Smith</h3>
+            <h3 className="mt-1 text-2xl font-bold">Smith Family</h3>
             <div className="mt-4 grid aspect-square grid-cols-5 gap-1 rounded-md bg-white p-3">
               {Array.from({ length: 25 }).map((_, index) => (
                 <div
@@ -93,8 +100,12 @@ function ParentPassMockup() {
             </p>
           </div>
           <div className="mt-4 grid grid-cols-2 gap-3">
-            <Metric label="Entry" value="Ready" />
-            <Metric label="Gate" value="North" />
+            <Metric label="Payment" value="Saved" />
+            <Metric label="Share" value="Ready" />
+          </div>
+          <div className="mt-3 rounded-lg border border-fanpass-border p-3">
+            <CheckInRow name="Grandparent pass" time="Shared" />
+            <CheckInRow name="Youth wristband" time="Included" />
           </div>
         </div>
       </div>
@@ -131,6 +142,20 @@ function CoachMockup() {
         <TeamRow name="A. Johnson" status="Checked in" ready />
         <TeamRow name="T. Williams" status="Pass sent" ready />
         <TeamRow name="R. Davis" status="Needs pass" />
+      </div>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        <div className="rounded-lg border border-blue-100 bg-blue-50 p-3">
+          <p className="text-sm font-bold text-fanpass-blue">Next action</p>
+          <p className="mt-1 text-sm leading-6 text-slate-600">
+            Send reminders to 4 families before arrival.
+          </p>
+        </div>
+        <div className="rounded-lg border border-emerald-100 bg-emerald-50 p-3">
+          <p className="text-sm font-bold text-emerald-700">Organizer view</p>
+          <p className="mt-1 text-sm leading-6 text-slate-600">
+            Team access status is visible at the gate.
+          </p>
+        </div>
       </div>
     </div>
   );
