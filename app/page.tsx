@@ -37,10 +37,7 @@ export default function Home() {
       <section id="choose-role" className="bg-fanpass-gray">
         <div className="mx-auto max-w-6xl px-5 py-8 lg:py-10">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
-              Select your role
-            </p>
-            <h1 className="mt-3 text-4xl font-bold leading-tight text-fanpass-navy lg:text-5xl">
+            <h1 className="text-4xl font-bold leading-tight text-fanpass-navy lg:text-5xl">
               The unified admission system for youth tournaments.
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
