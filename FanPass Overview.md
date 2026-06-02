@@ -12,6 +12,7 @@ FanPass is currently a role-based waitlist website for a youth sports tournament
 - Audience-specific waitlist source values
 - Email validation
 - Loading, success, and error states
+- Shared footer with FanPass contact email
 - Supabase migration for waitlist storage
 - Placeholder privacy and terms pages
 

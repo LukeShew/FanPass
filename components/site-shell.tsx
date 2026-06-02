@@ -41,7 +41,16 @@ export function SiteFooter() {
           <div className="mb-3">
             <SiteLogo size="small" />
           </div>
-          <p>Questions? Contact the FanPass team.</p>
+          <p>
+            Questions? Contact the FanPass team at{" "}
+            <a
+              className="font-semibold text-fanpass-blue hover:text-blue-700"
+              href="mailto:lsautomates@gmail.com"
+            >
+              lsautomates@gmail.com
+            </a>
+            .
+          </p>
         </div>
         <nav className="flex gap-4">
           <Link className="hover:text-fanpass-blue" href="/privacy">
