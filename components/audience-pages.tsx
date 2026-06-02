@@ -264,10 +264,6 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
             <h2 className="mt-3 text-3xl font-bold">
               Join the waitlist as a {content.label}.
             </h2>
-            <p className="mt-4 leading-7 text-slate-300">
-              This signs you up under the right audience so FanPass can send
-              updates that match how you would use the product.
-            </p>
             <ul className="mt-6 grid gap-3 text-sm font-semibold text-white">
               {content.quickBenefits.map((benefit) => (
                 <li key={benefit} className="flex gap-2">
