@@ -100,7 +100,7 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
     ],
     stats: [
       { value: "Simple", label: "mobile pass" },
-      { value: "One place", label: "payments and passes" },
+      { value: "Unified", label: "payment processor" },
       { value: "Quick", label: "entry flow" }
     ]
   },
