@@ -44,9 +44,8 @@ export default function Home() {
               The unified admission system for youth tournaments.
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              FanPass works differently depending on your role. Pick who you
-              are so the next page shows the right reasons, mockups, and
-              waitlist.
+              FanPass works differently depending on your role. Pick the
+              position that best describes you to see how FanPass can help.
             </p>
           </div>
 
