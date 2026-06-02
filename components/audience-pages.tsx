@@ -154,7 +154,7 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
       <SiteHeader />
 
       <section className="bg-fanpass-gray">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-0 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:pb-16 lg:pt-0">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:pb-16 lg:pt-10">
           <div>
             <p className="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-3 py-1 text-sm font-semibold text-fanpass-blue">
               {content.eyebrow}
