@@ -126,7 +126,7 @@ function CoachMockup() {
           </h3>
         </div>
         <div className="rounded-md bg-blue-50 px-3 py-1 text-sm font-bold text-fanpass-blue">
-          18 ready
+          2 checked in
         </div>
       </div>
 
@@ -138,10 +138,14 @@ function CoachMockup() {
 
       <div className="mt-4 rounded-lg border border-fanpass-border p-4">
         <p className="mb-3 font-bold text-fanpass-navy">Arrival status</p>
-        <TeamRow name="M. Carter" status="Checked in" ready />
-        <TeamRow name="A. Johnson" status="Checked in" ready />
-        <TeamRow name="T. Williams" status="Pass sent" ready />
-        <TeamRow name="R. Davis" status="Needs pass" />
+        <TeamRow name="M. Carter" status="Checked in" statusColor="green" />
+        <TeamRow name="A. Johnson" status="Checked in" statusColor="green" />
+        <TeamRow
+          name="T. Williams"
+          status="Has pass, not checked in"
+          statusColor="yellow"
+        />
+        <TeamRow name="R. Davis" status="No pass yet" statusColor="red" />
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <div className="rounded-lg border border-blue-100 bg-blue-50 p-3">
@@ -184,12 +188,18 @@ function CheckInRow({ name, time }: { name: string; time: string }) {
 function TeamRow({
   name,
   status,
-  ready = false
+  statusColor
 }: {
   name: string;
   status: string;
-  ready?: boolean;
+  statusColor: "green" | "yellow" | "red";
 }) {
+  const dotColor = {
+    green: "bg-emerald-500",
+    yellow: "bg-amber-400",
+    red: "bg-red-500"
+  }[statusColor];
+
   return (
     <div className="flex items-center justify-between border-t border-fanpass-border py-3 first:border-t-0 first:pt-0">
       <div>
@@ -197,9 +207,7 @@ function TeamRow({
         <p className="text-sm text-slate-500">{status}</p>
       </div>
       <div
-        className={`h-3 w-3 rounded-full ${
-          ready ? "bg-emerald-500" : "bg-amber-400"
-        }`}
+        className={`h-3 w-3 rounded-full ${dotColor}`}
       />
     </div>
   );
