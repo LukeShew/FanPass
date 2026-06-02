@@ -15,7 +15,7 @@ const roleCardContent: Record<
   organizers: {
     button: "I'm a Director",
     tagline: "Sell and manage passes",
-    hint: "Built for tournament teams that need cleaner gate revenue and check-ins."
+    hint: "Built for managers who need a clean dashboard to track all ticket sales and check-ins."
   },
   parents: {
     button: "I'm a Parent",
