@@ -82,7 +82,7 @@ function ParentPassMockup() {
           </div>
           <div className="rounded-lg bg-fanpass-blue p-4 text-white">
             <p className="text-sm font-semibold text-blue-100">Weekend Pass</p>
-            <h3 className="mt-1 text-2xl font-bold">Smith Family</h3>
+            <h3 className="mt-1 text-2xl font-bold">John Smith</h3>
             <div className="mt-4 grid aspect-square grid-cols-5 gap-1 rounded-md bg-white p-3">
               {Array.from({ length: 25 }).map((_, index) => (
                 <div

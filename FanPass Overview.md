@@ -12,6 +12,7 @@ FanPass is currently a role-based waitlist website for a youth sports tournament
 - Parent page stats emphasize a unified payment processor
 - Parent phone mockup shows paid status, entrance info, and simple pass navigation rows
 - Parent phone mockup action rows use clearer spacing below the pass details
+- Parent phone mockup uses John Smith as the sample pass holder
 - Role-page waitlist sections keep the CTA focused by removing the extra explanatory paragraph
 - Waitlist form with default and locked role support
 - Audience-specific waitlist source values
