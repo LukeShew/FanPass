@@ -145,7 +145,7 @@ function CoachMockup() {
           status="Has pass, not checked in"
           statusColor="yellow"
         />
-        <TeamRow name="R. Davis" status="No pass yet" statusColor="red" />
+        <TeamRow name="R. Davis" status="Has not registered" statusColor="red" />
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <div className="rounded-lg border border-blue-100 bg-blue-50 p-3">
