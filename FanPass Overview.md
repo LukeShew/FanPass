@@ -2,13 +2,14 @@
 
 ## What The Product Currently Is
 
-FanPass is currently a waitlist website for a youth sports tournament admission platform.
+FanPass is currently a role-based waitlist website for a youth sports tournament admission platform.
 
 ## What Works
 
-- One-page marketing site
-- Waitlist form
-- Audience selector
+- Role-first homepage with three audience cards
+- Dedicated audience pages for tournament directors, parents/spectators, and coaches
+- Waitlist form with default and locked role support
+- Audience-specific waitlist source values
 - Email validation
 - Loading, success, and error states
 - Supabase migration for waitlist storage
@@ -32,7 +33,10 @@ FanPass is currently a waitlist website for a youth sports tournament admission 
 
 ## Pages And Features
 
-- `/` waitlist landing page
+- `/` role-first audience selection page
+- `/organizers` tournament director page with organizer-specific mockup and waitlist flow
+- `/parents` parent/spectator page with family-specific mockup and waitlist flow
+- `/coaches` coach page with team-specific mockup and waitlist flow
 - `/privacy` placeholder privacy page
 - `/terms` placeholder terms page
 
@@ -46,11 +50,18 @@ Migration added for `public.waitlist_signups`.
 
 Repository: `https://github.com/LukeShew/FanPass`
 
-Local Git remote is set to that repo. Pushing requires GitHub authentication and explicit approval.
+Local Git remote is set to that repo. Keep work committed after changes so the GitHub push button can push `main` to `origin/main`.
 
 ## Vercel Status
 
 The app is ready for Vercel configuration as a Next.js project. Deployment should wait until environment variables are added.
+
+## Workflow Notes
+
+- After each prompt that changes the project, update this overview doc unless literally nothing changed.
+- Do not create folders outside this project folder unless explicitly allowed.
+- Leave the local repo committed when changes are complete so pushing to GitHub is one click.
+- Include the local website link at the end of every chat.
 
 ## Local Website Instructions
 
@@ -71,13 +82,11 @@ Not deployed from this workspace yet.
 
 ## Risks And Limitations
 
-- The waitlist form will not submit until Supabase public env vars are configured.
-- GitHub clone failed locally because private repo auth is not configured for command-line Git.
+- The waitlist form will not submit unless Supabase public env vars are configured.
 - Legal pages are placeholders and should be replaced before a paid launch.
 
 ## Recommended Next Improvements
 
-- Add the real logo asset if a final file exists.
 - Configure Vercel env vars.
-- Push the local commit to GitHub after approval.
 - Deploy a Vercel preview and test the real Supabase insert path.
+- Replace placeholder legal pages before launch.
