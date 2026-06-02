@@ -3,21 +3,33 @@
 import { FormEvent, useMemo, useState } from "react";
 import { hasSupabaseConfig, supabase } from "@/lib/supabase";
 
-const roles = [
+export const waitlistRoles = [
   "Parent / Spectator",
   "Tournament Director / Organizer",
   "Coach",
   "Other"
 ] as const;
 
+export type WaitlistRole = (typeof waitlistRoles)[number];
+
 type Status = "idle" | "loading" | "success" | "error";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function WaitlistForm() {
+export function WaitlistForm({
+  defaultRole = waitlistRoles[0],
+  lockRole = false,
+  source = "website",
+  heading = "Join the FanPass waitlist"
+}: {
+  defaultRole?: WaitlistRole;
+  lockRole?: boolean;
+  source?: string;
+  heading?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-  const [role, setRole] = useState<(typeof roles)[number]>(roles[0]);
+  const [role, setRole] = useState<WaitlistRole>(defaultRole);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [organization, setOrganization] = useState("");
@@ -71,7 +83,7 @@ export function WaitlistForm() {
       role,
       organization: organization.trim() || null,
       notes: notes.trim() || null,
-      source: "website"
+      source
     });
 
     if (error) {
@@ -101,37 +113,43 @@ export function WaitlistForm() {
           Early access
         </p>
         <h2 className="mt-2 text-2xl font-bold text-fanpass-navy">
-          Join the FanPass waitlist
+          {heading}
         </h2>
       </div>
 
-      <fieldset className="mb-5">
-        <legend className="mb-2 text-sm font-semibold text-slate-700">
-          I am a
-        </legend>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {roles.map((item) => (
-            <label
-              key={item}
-              className={`flex cursor-pointer items-center rounded-md border px-3 py-2 text-sm font-medium transition ${
-                role === item
-                  ? "border-fanpass-blue bg-blue-50 text-fanpass-blue"
-                  : "border-fanpass-border bg-white text-slate-700 hover:border-blue-200"
-              }`}
-            >
-              <input
-                type="radio"
-                name="role"
-                value={item}
-                checked={role === item}
-                onChange={() => setRole(item)}
-                className="sr-only"
-              />
-              {item}
-            </label>
-          ))}
+      {lockRole ? (
+        <div className="mb-5 rounded-md border border-blue-100 bg-blue-50 px-3 py-2 text-sm font-semibold text-fanpass-blue">
+          Signing up as: {role}
         </div>
-      </fieldset>
+      ) : (
+        <fieldset className="mb-5">
+          <legend className="mb-2 text-sm font-semibold text-slate-700">
+            I am a
+          </legend>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            {waitlistRoles.map((item) => (
+              <label
+                key={item}
+                className={`flex cursor-pointer items-center rounded-md border px-3 py-2 text-sm font-medium transition ${
+                  role === item
+                    ? "border-fanpass-blue bg-blue-50 text-fanpass-blue"
+                    : "border-fanpass-border bg-white text-slate-700 hover:border-blue-200"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="role"
+                  value={item}
+                  checked={role === item}
+                  onChange={() => setRole(item)}
+                  className="sr-only"
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
 
       <div className="grid gap-4">
         <label className="grid gap-1.5 text-sm font-medium text-slate-700">
