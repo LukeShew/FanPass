@@ -20,12 +20,14 @@ export function WaitlistForm({
   defaultRole = waitlistRoles[0],
   lockRole = false,
   source = "website",
-  heading = "Join the FanPass waitlist"
+  heading = "Join the FanPass waitlist",
+  organizationLabel = "Organization or team"
 }: {
   defaultRole?: WaitlistRole;
   lockRole?: boolean;
   source?: string;
   heading?: string;
+  organizationLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -64,6 +66,18 @@ export function WaitlistForm({
     if (!role) {
       setStatus("error");
       setMessage("Choose the option that best describes you.");
+      return;
+    }
+
+    if (!name.trim()) {
+      setStatus("error");
+      setMessage("Enter your name.");
+      return;
+    }
+
+    if (!organization.trim()) {
+      setStatus("error");
+      setMessage(`Enter your ${organizationLabel.toLowerCase()}.`);
       return;
     }
 
@@ -169,20 +183,22 @@ export function WaitlistForm({
             Name
             <input
               type="text"
+              required
               value={name}
               onChange={(event) => setName(event.target.value)}
-              placeholder="Optional"
+              placeholder="Your name"
               className="h-11 rounded-md border border-fanpass-border px-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
             />
           </label>
 
           <label className="grid gap-1.5 text-sm font-medium text-slate-700">
-            Organization or team
+            {organizationLabel}
             <input
               type="text"
+              required
               value={organization}
               onChange={(event) => setOrganization(event.target.value)}
-              placeholder="Optional"
+              placeholder={organizationLabel}
               className="h-11 rounded-md border border-fanpass-border px-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
             />
           </label>

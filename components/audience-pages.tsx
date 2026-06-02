@@ -146,6 +146,8 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
 
 export function AudiencePage({ audience }: { audience: AudienceKey }) {
   const content = audienceContent[audience];
+  const organizationLabel =
+    audience === "organizers" ? "Organization" : "Organization or team";
 
   return (
     <main className="min-h-screen bg-white">
@@ -279,6 +281,7 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
             lockRole
             source={content.source}
             heading={`Join as a ${content.label}`}
+            organizationLabel={organizationLabel}
           />
         </div>
       </section>
