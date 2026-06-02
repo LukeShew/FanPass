@@ -41,7 +41,7 @@ export default function Home() {
               Select your role
             </p>
             <h1 className="mt-3 text-4xl font-bold leading-tight text-fanpass-navy lg:text-5xl">
-              The unified admission and check-in system for youth tournaments.
+              The unified admission system for youth tournaments.
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
               FanPass works differently depending on your role. Pick who you
@@ -68,7 +68,7 @@ function AudienceCard({ audience }: { audience: AudienceKey }) {
   const card = roleCardContent[audience];
 
   return (
-    <article className="rounded-lg border border-fanpass-border bg-white p-5 text-center shadow-soft">
+    <article className="flex min-h-[260px] flex-col rounded-lg border border-fanpass-border bg-white p-5 text-center shadow-soft">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-fanpass-blue">
           {content.eyebrow}
@@ -81,7 +81,7 @@ function AudienceCard({ audience }: { audience: AudienceKey }) {
         </p>
       </div>
 
-      <div className="pt-5">
+      <div className="mt-auto pt-5">
         <Link
           href={`/${audience}`}
           className="inline-flex h-12 w-full items-center justify-center rounded-md bg-fanpass-blue px-5 text-base font-semibold text-white transition hover:bg-blue-700"
