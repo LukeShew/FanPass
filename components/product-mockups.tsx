@@ -1,5 +1,5 @@
 import Image from "next/image";
-import tournibaseAppLogo from "@/TourniBase logos/tournibase-transparent-app-logo.png";
+import tournibaseLogoLockup from "@/TourniBase logos/tournibase-transparent-logo-lockup.png";
 
 type MockupType = "organizers" | "parents" | "coaches";
 
@@ -117,15 +117,14 @@ function ParentPassMockup() {
                   </span>
                 </button>
 
-                <div className="flex items-center gap-2">
+                <div className="relative h-9 w-36">
                   <Image
-                    src={tournibaseAppLogo}
-                    alt=""
-                    className="h-9 w-9 object-contain"
+                    src={tournibaseLogoLockup}
+                    alt="TourniBase"
+                    fill
+                    sizes="144px"
+                    className="object-contain"
                   />
-                  <span className="text-xl font-bold text-tournibase-navy">
-                    TourniBase
-                  </span>
                 </div>
 
                 <button
