@@ -117,9 +117,12 @@ function ParentPassMockup() {
                   type="button"
                 >
                   <span className="grid gap-1">
-                    <span className="h-0.5 w-5 rounded bg-current" />
-                    <span className="h-0.5 w-5 rounded bg-current" />
-                    <span className="h-0.5 w-5 rounded bg-current" />
+                    {[0, 1, 2].map((item) => (
+                      <span key={item} className="flex items-center gap-1.5">
+                        <span className="h-2 w-2 rounded-full bg-current" />
+                        <span className="h-2 w-4 rounded bg-current" />
+                      </span>
+                    ))}
                   </span>
                 </button>
 
