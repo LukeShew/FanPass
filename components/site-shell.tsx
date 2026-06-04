@@ -4,8 +4,8 @@ import tournibaseLogo from "@/TourniBase logos/tournibase-transparent-logo-locku
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-tournibase-border bg-white">
-      <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 py-4">
+    <header className="overflow-visible border-b border-tournibase-border bg-white">
+      <div className="mx-auto grid h-[76px] max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-5">
         <div className="justify-self-start">
           <SiteLogo priority />
         </div>
@@ -34,9 +34,9 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-tournibase-border bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <div className="mb-3">
+          <div className="mb-1">
             <SiteLogo size="small" />
           </div>
           <p>
