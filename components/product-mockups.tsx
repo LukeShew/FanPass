@@ -170,13 +170,13 @@ function ParentPassMockup() {
 
                 <div className="mx-auto mt-7 grid aspect-square w-40 grid-cols-7 gap-1 rounded-xl bg-white p-3 shadow-inner">
                   {[
-                    1, 1, 1, 0, 1, 1, 1,
-                    1, 0, 1, 0, 1, 0, 1,
-                    1, 1, 1, 1, 1, 1, 1,
-                    0, 1, 0, 1, 0, 1, 0,
-                    1, 1, 1, 0, 1, 1, 1,
+                    1, 1, 0, 1, 0, 1, 1,
+                    0, 1, 1, 0, 1, 1, 0,
                     1, 0, 1, 1, 1, 0, 1,
-                    1, 1, 1, 0, 1, 1, 1
+                    1, 1, 0, 1, 0, 1, 0,
+                    0, 1, 1, 1, 0, 0, 1,
+                    1, 0, 0, 1, 1, 0, 1,
+                    1, 1, 0, 0, 1, 1, 0
                   ].map((filled, index) => (
                     <span
                       key={index}
