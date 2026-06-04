@@ -139,7 +139,7 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
     stats: [
       { value: "Team", label: "access status" },
       { value: "Fewer", label: "entry questions" },
-      { value: "Ready", label: "arrival view" }
+      { value: "Ready", label: "for arrival" }
     ]
   }
 };

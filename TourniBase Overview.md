@@ -63,6 +63,7 @@ TourniBase is trying to become the standardized admission infrastructure layer f
 - Role-first homepage with a concise hero, centered header navigation, contact email shortcut, refined audience card copy for each role, aligned card text/buttons, bold role buttons, and progressive disclosure
 - Dedicated audience pages for tournament directors, parents/spectators, and coaches with role-specific benefits, mockups, and stronger signup prompts
 - Coach mockup shows clearer roster states for checked in, pass-ready, and not-registered players
+- Coach page stats use clearer readiness copy with "for arrival"
 - Parent page stats emphasize a unified payment processor
 - Parent page uses a realistic iPhone-style pass mockup with TourniBase branding, paid status, entrance info, a denser random-looking QR-style code, and simple pass navigation rows
 - Parent phone mockup uses the real TourniBase logo lockup in the app header, centered status-bar elements, iOS-style cell/battery indicators, and a smaller standard bell notification icon
