@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import tournibaseLogo from "@/TourniBase logos/tournibase-secondary-logo-lockup.png";
+import tournibaseLogo from "@/TourniBase logos/tournibase-transparent-logo-lockup.png";
 
 export function SiteHeader() {
   return (
@@ -82,8 +82,8 @@ export function SiteLogo({
         priority={priority}
         className={
           size === "small"
-            ? "h-8 w-auto rounded-sm"
-            : "h-10 w-auto rounded-sm sm:h-11"
+            ? "h-10 w-auto rounded-sm"
+            : "h-12 w-auto rounded-sm sm:h-14"
         }
       />
     </Link>
