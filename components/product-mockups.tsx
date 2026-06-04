@@ -90,7 +90,7 @@ function ParentPassMockup() {
 
             <div className="flex h-[660px] flex-col bg-white px-5 pb-5 pt-4">
               <div className="mb-7 grid grid-cols-[1fr_112px_1fr] items-center text-xs font-bold text-tournibase-navy">
-                <span className="justify-self-center">9:41</span>
+                <span className="justify-self-center text-sm">9:41</span>
                 <span aria-hidden="true" />
                 <div className="flex items-center gap-1.5 justify-self-center">
                   <div className="flex h-3.5 w-[18px] items-end gap-0.5">
