@@ -34,15 +34,15 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <SiteHeader />
 
-      <section id="choose-role" className="bg-fanpass-gray">
+      <section id="choose-role" className="bg-tournibase-gray">
         <div className="mx-auto max-w-6xl px-5 py-8 lg:py-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold leading-tight text-fanpass-navy lg:text-5xl">
+            <h1 className="text-4xl font-bold leading-tight text-tournibase-navy lg:text-5xl">
               The unified admission system for youth tournaments.
             </h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              FanPass works differently depending on your role. Pick the
-              position that best describes you to see how FanPass can help.
+              TourniBase works differently depending on your role. Pick the
+              position that best describes you to see how TourniBase can help.
             </p>
           </div>
 
@@ -64,12 +64,12 @@ function AudienceCard({ audience }: { audience: AudienceKey }) {
   const card = roleCardContent[audience];
 
   return (
-    <article className="flex min-h-[260px] flex-col rounded-lg border border-fanpass-border bg-white p-5 text-center shadow-soft">
+    <article className="flex min-h-[260px] flex-col rounded-lg border border-tournibase-border bg-white p-5 text-center shadow-soft">
       <div>
-        <p className="flex min-h-10 items-center justify-center text-sm font-semibold uppercase tracking-[0.16em] text-fanpass-blue">
+        <p className="flex min-h-10 items-center justify-center text-sm font-semibold uppercase tracking-[0.16em] text-tournibase-blue">
           {content.eyebrow}
         </p>
-        <h3 className="mt-3 text-2xl font-bold text-fanpass-navy">
+        <h3 className="mt-3 text-2xl font-bold text-tournibase-navy">
           {card.tagline}
         </h3>
         <p className="mx-auto mt-3 max-w-xs leading-7 text-slate-600">
@@ -80,7 +80,7 @@ function AudienceCard({ audience }: { audience: AudienceKey }) {
       <div className="mt-auto pt-5">
         <Link
           href={`/${audience}`}
-          className="inline-flex h-12 w-full items-center justify-center rounded-md bg-fanpass-blue px-5 text-base font-semibold text-white transition hover:bg-blue-700"
+          className="inline-flex h-12 w-full items-center justify-center rounded-md bg-tournibase-blue px-5 text-base font-semibold text-white transition hover:bg-blue-700"
         >
           {card.button}
         </Link>

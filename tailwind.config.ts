@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        fanpass: {
+        tournibase: {
           blue: "#2563EB",
           navy: "#0F172A",
           gray: "#F8FAFC",

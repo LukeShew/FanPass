@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FanPass | Youth Sports Tournament Admission",
+  title: "TourniBase | Youth Sports Tournament Admission",
   description:
-    "FanPass is building unified admission, check-in, and revenue tools for youth sports tournaments.",
-  metadataBase: new URL("https://fanpass.app"),
+    "TourniBase is building unified admission, check-in, and revenue tools for youth sports tournaments.",
   openGraph: {
-    title: "FanPass",
+    title: "TourniBase",
     description:
       "A unified admission and check-in system for youth sports tournaments.",
     type: "website"

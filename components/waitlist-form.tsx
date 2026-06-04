@@ -20,7 +20,7 @@ export function WaitlistForm({
   defaultRole = waitlistRoles[0],
   lockRole = false,
   source = "website",
-  heading = "Join the FanPass waitlist",
+  heading = "Join the TourniBase waitlist",
   organizationLabel = "Organization or team"
 }: {
   defaultRole?: WaitlistRole;
@@ -41,14 +41,14 @@ export function WaitlistForm({
 
   const helperText = useMemo(() => {
     if (status === "success") {
-      return "You are on the FanPass waitlist. We will reach out as the product opens up.";
+      return "You are on the TourniBase waitlist. We will reach out as the product opens up.";
     }
 
     if (message) {
       return message;
     }
 
-    return "No spam. Just FanPass updates and early access.";
+    return "No spam. Just TourniBase updates and early access.";
   }, [message, status]);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -84,7 +84,7 @@ export function WaitlistForm({
     if (!hasSupabaseConfig || !supabase) {
       setStatus("error");
       setMessage(
-        "FanPass is not connected to Supabase yet. Add the public Supabase URL and anon key in .env.local."
+        "TourniBase is not connected to Supabase yet. Add the public Supabase URL and anon key in .env.local."
       );
       return;
     }
@@ -104,7 +104,7 @@ export function WaitlistForm({
       setStatus("error");
       setMessage(
         error.code === "23505"
-          ? "That email is already on the FanPass waitlist."
+          ? "That email is already on the TourniBase waitlist."
           : "Something went wrong. Please try again."
       );
       return;
@@ -120,19 +120,19 @@ export function WaitlistForm({
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-lg border border-fanpass-border bg-white p-5 shadow-soft sm:p-6"
+      className="rounded-lg border border-tournibase-border bg-white p-5 shadow-soft sm:p-6"
     >
       <div className="mb-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tournibase-blue">
           Early access
         </p>
-        <h2 className="mt-2 text-2xl font-bold text-fanpass-navy">
+        <h2 className="mt-2 text-2xl font-bold text-tournibase-navy">
           {heading}
         </h2>
       </div>
 
       {lockRole ? (
-        <div className="mb-5 rounded-md border border-blue-100 bg-blue-50 px-3 py-2 text-sm font-semibold text-fanpass-blue">
+        <div className="mb-5 rounded-md border border-blue-100 bg-blue-50 px-3 py-2 text-sm font-semibold text-tournibase-blue">
           Signing up as: {role}
         </div>
       ) : (
@@ -146,8 +146,8 @@ export function WaitlistForm({
                 key={item}
                 className={`flex cursor-pointer items-center rounded-md border px-3 py-2 text-sm font-medium transition ${
                   role === item
-                    ? "border-fanpass-blue bg-blue-50 text-fanpass-blue"
-                    : "border-fanpass-border bg-white text-slate-700 hover:border-blue-200"
+                    ? "border-tournibase-blue bg-blue-50 text-tournibase-blue"
+                    : "border-tournibase-border bg-white text-slate-700 hover:border-blue-200"
                 }`}
               >
                 <input
@@ -174,7 +174,7 @@ export function WaitlistForm({
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="you@example.com"
-            className="h-11 rounded-md border border-fanpass-border px-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
+            className="h-11 rounded-md border border-tournibase-border px-3 text-base text-tournibase-navy outline-none transition placeholder:text-slate-400 focus:border-tournibase-blue focus:ring-4 focus:ring-blue-100"
           />
         </label>
 
@@ -187,7 +187,7 @@ export function WaitlistForm({
               value={name}
               onChange={(event) => setName(event.target.value)}
               placeholder="Your name"
-              className="h-11 rounded-md border border-fanpass-border px-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
+              className="h-11 rounded-md border border-tournibase-border px-3 text-base text-tournibase-navy outline-none transition placeholder:text-slate-400 focus:border-tournibase-blue focus:ring-4 focus:ring-blue-100"
             />
           </label>
 
@@ -199,7 +199,7 @@ export function WaitlistForm({
               value={organization}
               onChange={(event) => setOrganization(event.target.value)}
               placeholder={organizationLabel}
-              className="h-11 rounded-md border border-fanpass-border px-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
+              className="h-11 rounded-md border border-tournibase-border px-3 text-base text-tournibase-navy outline-none transition placeholder:text-slate-400 focus:border-tournibase-blue focus:ring-4 focus:ring-blue-100"
             />
           </label>
         </div>
@@ -209,9 +209,9 @@ export function WaitlistForm({
           <textarea
             value={notes}
             onChange={(event) => setNotes(event.target.value)}
-            placeholder="What should FanPass help with?"
+            placeholder="What should TourniBase help with?"
             rows={4}
-            className="resize-none rounded-md border border-fanpass-border px-3 py-3 text-base text-fanpass-navy outline-none transition placeholder:text-slate-400 focus:border-fanpass-blue focus:ring-4 focus:ring-blue-100"
+            className="resize-none rounded-md border border-tournibase-border px-3 py-3 text-base text-tournibase-navy outline-none transition placeholder:text-slate-400 focus:border-tournibase-blue focus:ring-4 focus:ring-blue-100"
           />
         </label>
       </div>
@@ -219,9 +219,9 @@ export function WaitlistForm({
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-5 h-12 w-full rounded-md bg-fanpass-blue px-5 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
+        className="mt-5 h-12 w-full rounded-md bg-tournibase-blue px-5 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
       >
-        {isSubmitting ? "Joining..." : "Join the FanPass waitlist"}
+        {isSubmitting ? "Joining..." : "Join the TourniBase waitlist"}
       </button>
 
       <p

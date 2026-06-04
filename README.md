@@ -1,6 +1,6 @@
-# FanPass Waitlist Website
+# TourniBase Waitlist Website
 
-FanPass is a unified admission, check-in, and revenue platform for youth sports tournaments. This repo contains the first production-ready waitlist website for the product.
+TourniBase is a unified admission, check-in, and revenue platform for youth sports tournaments. This repo contains the first production-ready waitlist website for the product.
 
 ## Tech Stack
 

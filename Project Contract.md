@@ -2,11 +2,11 @@
 
 ## Product Name
 
-FanPass
+TourniBase
 
 ## One-Sentence Description
 
-FanPass is a unified admission, check-in, and revenue platform for youth sports tournaments.
+TourniBase is a unified admission, check-in, and revenue platform for youth sports tournaments.
 
 ## Target Users
 
@@ -17,18 +17,19 @@ FanPass is a unified admission, check-in, and revenue platform for youth sports 
 
 ## MVP Definition
 
-The MVP is a one-page waitlist website that explains FanPass clearly and captures interested users in Supabase.
+The MVP is a role-based waitlist website that explains TourniBase clearly and captures interested users in Supabase.
 
 ## Website Scope
 
 The website includes:
 
-- FanPass brand presence
+- TourniBase brand presence
 - concise product explanation
 - waitlist signup form
 - audience selector
 - parents section
 - tournament directors section
+- coaches section
 - privacy and terms placeholder pages
 
 ## iOS App Scope Later
@@ -69,7 +70,8 @@ The app is ready for Vercel once environment variables are configured. Productio
 
 ## Next Priorities
 
-- Add the real production domain
+- Rename connected service dashboards where needed
+- Add the real production domain later
 - Replace placeholder legal pages before paid launch
 - Build admin review/export tools for waitlist signups
 - Define the full tournament, pass, and check-in data model

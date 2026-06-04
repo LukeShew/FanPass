@@ -34,10 +34,10 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
     eyebrow: "Built for tournament directors",
     title: "Streamline admissions and boost gate revenue.",
     description:
-      "FanPass gives tournament managers one place to sell passes, check guests in, and track admission activity while the tournament is still moving.",
+      "TourniBase gives tournament managers one place to sell passes, check guests in, and track admission activity while the tournament is still moving.",
     benefitsTitle: "Know exactly what is happening at every entrance.",
     benefitsIntro:
-      "FanPass is built to replace paper lists, scattered payment screenshots, and end-of-day revenue guesswork with a live admissions workflow.",
+      "TourniBase is built to replace paper lists, scattered payment screenshots, and end-of-day revenue guesswork with a live admissions workflow.",
     role: "Tournament Director / Organizer",
     source: "website-organizers",
     mockup: "organizers",
@@ -72,10 +72,10 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
     eyebrow: "Built for families",
     title: "Get through the gate faster and get back to the game.",
     description:
-      "FanPass helps families buy, save, and show passes without hunting for cash, payment screenshots, or the right person at the gate.",
+      "TourniBase helps families buy, save, and show passes without hunting for cash, payment screenshots, or the right person at the gate.",
     benefitsTitle: "Keep tournament entry simple for the whole family.",
     benefitsIntro:
-      "Parents care about convenience, savings, and getting to the court or field on time. FanPass keeps the pass flow easy before and during the event.",
+      "Parents care about convenience, savings, and getting to the court or field on time. TourniBase keeps the pass flow easy before and during the event.",
     role: "Parent / Spectator",
     source: "website-parents",
     mockup: "parents",
@@ -110,10 +110,10 @@ export const audienceContent: Record<AudienceKey, AudienceContent> = {
     eyebrow: "Built for coaches",
     title: "Organize team entry before the first whistle.",
     description:
-      "FanPass helps coaches see who is ready for event access, which families still need passes, and what needs attention before the team arrives.",
+      "TourniBase helps coaches see who is ready for event access, which families still need passes, and what needs attention before the team arrives.",
     benefitsTitle: "Handle pass status before it turns into gate chaos.",
     benefitsIntro:
-      "Coaches should not spend tournament mornings answering the same admission questions. FanPass gives teams a clearer way to coordinate access.",
+      "Coaches should not spend tournament mornings answering the same admission questions. TourniBase gives teams a clearer way to coordinate access.",
     role: "Coach",
     source: "website-coaches",
     mockup: "coaches",
@@ -153,22 +153,22 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
     <main className="min-h-screen bg-white">
       <SiteHeader />
 
-      <section className="bg-fanpass-gray">
+      <section className="bg-tournibase-gray">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:pb-16 lg:pt-10">
           <div>
-            <p className="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-3 py-1 text-sm font-semibold text-fanpass-blue">
+            <p className="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-3 py-1 text-sm font-semibold text-tournibase-blue">
               {content.eyebrow}
             </p>
-            <h1 className="text-4xl font-bold leading-tight text-fanpass-navy sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-tournibase-navy sm:text-5xl lg:text-6xl">
               {content.title}
             </h1>
             <p className="mt-5 text-lg leading-8 text-slate-600">
               {content.description}
             </p>
-            <ul className="mt-6 grid gap-2 text-sm font-semibold text-fanpass-navy">
+            <ul className="mt-6 grid gap-2 text-sm font-semibold text-tournibase-navy">
               {content.quickBenefits.map((benefit) => (
                 <li key={benefit} className="flex gap-2">
-                  <span className="text-fanpass-blue">✓</span>
+                  <span className="text-tournibase-blue">✓</span>
                   <span>{benefit}</span>
                 </li>
               ))}
@@ -176,13 +176,13 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="#waitlist"
-                className="inline-flex h-12 items-center justify-center rounded-md bg-fanpass-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-tournibase-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
               >
                 {content.ctaLabel}
               </Link>
               <Link
                 href="/"
-                className="inline-flex h-12 items-center justify-center rounded-md border border-fanpass-border bg-white px-6 text-base font-semibold text-fanpass-navy transition hover:border-blue-200 hover:text-fanpass-blue"
+                className="inline-flex h-12 items-center justify-center rounded-md border border-tournibase-border bg-white px-6 text-base font-semibold text-tournibase-navy transition hover:border-blue-200 hover:text-tournibase-blue"
               >
                 View other roles
               </Link>
@@ -193,14 +193,14 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
         </div>
       </section>
 
-      <section className="border-y border-fanpass-border bg-white">
+      <section className="border-y border-tournibase-border bg-white">
         <div className="mx-auto grid max-w-6xl gap-4 px-5 py-10 sm:grid-cols-3">
           {content.stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-lg border border-fanpass-border bg-white p-5"
+              className="rounded-lg border border-tournibase-border bg-white p-5"
             >
-              <p className="text-2xl font-bold text-fanpass-blue">
+              <p className="text-2xl font-bold text-tournibase-blue">
                 {stat.value}
               </p>
               <p className="mt-1 text-sm font-medium text-slate-600">
@@ -212,12 +212,12 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
       </section>
 
       <section className="bg-white px-5 py-10">
-        <div className="mx-auto grid max-w-6xl gap-6 rounded-lg border border-fanpass-border bg-fanpass-gray p-6 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="mx-auto grid max-w-6xl gap-6 rounded-lg border border-tournibase-border bg-tournibase-gray p-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tournibase-blue">
               Early access
             </p>
-            <h2 className="mt-2 text-2xl font-bold text-fanpass-navy">
+            <h2 className="mt-2 text-2xl font-bold text-tournibase-navy">
               {content.benefitsTitle}
             </h2>
             <p className="mt-3 max-w-3xl leading-7 text-slate-600">
@@ -226,7 +226,7 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
           </div>
           <Link
             href="#waitlist"
-            className="inline-flex h-12 items-center justify-center rounded-md bg-fanpass-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-tournibase-blue px-6 text-base font-semibold text-white transition hover:bg-blue-700"
           >
             Join the waitlist
           </Link>
@@ -235,10 +235,10 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
 
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fanpass-blue">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tournibase-blue">
             Why it matters
           </p>
-          <h2 className="mt-3 text-3xl font-bold text-fanpass-navy">
+          <h2 className="mt-3 text-3xl font-bold text-tournibase-navy">
             {content.benefitsTitle}
           </h2>
         </div>
@@ -246,9 +246,9 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
           {content.reasons.map((reason) => (
             <article
               key={reason.title}
-              className="rounded-lg border border-fanpass-border bg-white p-5"
+              className="rounded-lg border border-tournibase-border bg-white p-5"
             >
-              <h3 className="text-lg font-bold text-fanpass-navy">
+              <h3 className="text-lg font-bold text-tournibase-navy">
                 {reason.title}
               </h3>
               <p className="mt-3 leading-7 text-slate-600">{reason.body}</p>
@@ -257,7 +257,7 @@ export function AudiencePage({ audience }: { audience: AudienceKey }) {
         </div>
       </section>
 
-      <section id="waitlist" className="bg-fanpass-navy px-5 py-16">
+      <section id="waitlist" className="bg-tournibase-navy px-5 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">
