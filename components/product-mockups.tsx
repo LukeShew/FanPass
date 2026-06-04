@@ -123,13 +123,13 @@ function ParentPassMockup() {
                   </span>
                 </button>
 
-                <div className="relative h-11 w-44">
+                <div className="relative h-12 w-48">
                   <Image
                     src={tournibaseLogoLockup}
                     alt="TourniBase"
                     fill
-                    sizes="176px"
-                    className="object-contain"
+                    sizes="192px"
+                    className="scale-[1.35] object-contain"
                   />
                 </div>
 
