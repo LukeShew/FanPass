@@ -109,9 +109,11 @@ TourniBase is trying to become the standardized admission infrastructure layer f
 
 Supabase project: `saxkpxzqwnwjqcjypysu`
 
+Supabase project display name: `TourniBase`
+
 Migration added for `public.waitlist_signups`.
 
-The Supabase project display name still needs to be renamed manually in the Supabase dashboard. The database ref and environment variable URL can stay the same.
+The database ref and environment variable URL stayed the same through the rebrand.
 
 ## GitHub Status
 
@@ -125,7 +127,9 @@ Keep work committed after changes so the GitHub push button can push `main` to `
 
 ## Vercel Status
 
-The app is ready for Vercel configuration as a Next.js project. Local Vercel project metadata is not present in this workspace, so the Vercel project name and generated Vercel URL need to be handled in the Vercel dashboard.
+The live Vercel waitlist site is available at `https://tourni-base.vercel.app/`.
+
+Local Vercel project metadata is not present in this workspace. Vercel dashboard-only deployment URLs may still show older generated deployment names, but the public production domain is the TourniBase URL above.
 
 The paid domain can wait until there is enough waitlist validation.
 
@@ -157,7 +161,7 @@ http://localhost:3000
 
 ## Live Website Link
 
-Not deployed from this workspace yet.
+https://tourni-base.vercel.app/
 
 ## Risks And Limitations
 
@@ -166,6 +170,5 @@ Not deployed from this workspace yet.
 
 ## Recommended Next Improvements
 
-- Configure Vercel env vars.
-- Deploy a Vercel preview and test the real Supabase insert path.
+- Confirm the live Vercel waitlist form inserts into Supabase.
 - Replace placeholder legal pages before launch.
