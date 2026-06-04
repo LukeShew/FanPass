@@ -117,7 +117,9 @@ The Supabase project display name still needs to be renamed manually in the Supa
 
 The local website code, package metadata, README, contract, and overview doc now use the TourniBase name.
 
-The GitHub repository itself still needs to be renamed manually from the previous brand. Keep the local remote unchanged until the GitHub repo is renamed, then update `origin` to the new repository URL.
+Repository: `https://github.com/LukeShew/TourniBase`
+
+Local Git remote `origin` points to `https://github.com/LukeShew/TourniBase.git`.
 
 Keep work committed after changes so the GitHub push button can push `main` to `origin/main`.
 
