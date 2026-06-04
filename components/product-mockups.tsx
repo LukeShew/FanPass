@@ -168,28 +168,22 @@ function ParentPassMockup() {
                   June 14 - June 16, 2026
                 </p>
 
-                <div className="mx-auto mt-7 grid aspect-square w-40 grid-cols-13 gap-0.5 rounded-xl bg-white p-3 shadow-inner">
+                <div className="mx-auto mt-7 grid aspect-square w-40 grid-cols-7 gap-1 rounded-xl bg-white p-3 shadow-inner">
                   {[
-                    1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1,
-                    1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0,
-                    1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1,
-                    0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1,
-                    1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0,
-                    0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1,
-                    1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0,
-                    0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
-                    1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1,
-                    0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1,
-                    1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0,
-                    1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1,
-                    0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0
+                    1, 1, 1, 0, 1, 1, 1,
+                    1, 0, 1, 0, 1, 0, 1,
+                    1, 1, 1, 1, 1, 1, 1,
+                    0, 1, 0, 1, 0, 1, 0,
+                    1, 1, 1, 0, 1, 1, 1,
+                    1, 0, 1, 1, 1, 0, 1,
+                    1, 1, 1, 0, 1, 1, 1
                   ].map((filled, index) => (
                     <span
                       key={index}
                       className={
                         filled
-                          ? "rounded-[2px] bg-tournibase-navy"
-                          : "rounded-[2px] bg-white"
+                          ? "rounded-sm bg-tournibase-navy"
+                          : "rounded-sm bg-white"
                       }
                     />
                   ))}
