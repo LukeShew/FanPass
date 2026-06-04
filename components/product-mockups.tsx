@@ -116,11 +116,11 @@ function ParentPassMockup() {
                   aria-label="Open menu"
                   type="button"
                 >
-                  <span className="grid gap-1">
+                  <span className="grid gap-0.5 text-tournibase-navy">
                     {[0, 1, 2].map((item) => (
-                      <span key={item} className="flex items-center gap-1.5">
-                        <span className="h-2 w-2 rounded-full bg-current" />
-                        <span className="h-2 w-4 rounded bg-current" />
+                      <span key={item} className="flex items-center gap-1">
+                        <span className="h-1.5 w-1.5 rounded-full bg-current" />
+                        <span className="h-1.5 w-5 rounded bg-current" />
                       </span>
                     ))}
                   </span>
