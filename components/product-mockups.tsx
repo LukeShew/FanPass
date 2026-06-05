@@ -83,8 +83,8 @@ function ParentPassMockup() {
   return (
     <div className="rounded-lg border border-tournibase-border bg-white px-4 py-6 shadow-soft">
       <div className="relative mx-auto w-full max-w-[330px]">
-        <div className="absolute -left-1.5 top-24 h-10 w-1 rounded-l bg-slate-500" />
-        <div className="absolute -left-1.5 top-40 h-16 w-1 rounded-l bg-slate-500" />
+        <div className="absolute -left-1.5 top-28 h-12 w-1 rounded-l bg-slate-500" />
+        <div className="absolute -left-1.5 top-44 h-12 w-1 rounded-l bg-slate-500" />
         <div className="absolute -right-1.5 top-36 h-20 w-1 rounded-r bg-slate-500" />
 
         <div className="rounded-[46px] border-[7px] border-slate-950 bg-slate-950 p-2 shadow-[0_30px_90px_rgba(15,23,42,0.18)]">
@@ -304,14 +304,30 @@ function CoachMockup() {
 
 function TabletFrame({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto w-full max-w-[680px]">
+    <div className="relative mx-auto w-full max-w-[680px]">
+      <div
+        className="absolute right-32 -top-1.5 h-1 w-14 rounded-t bg-slate-500"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute right-16 -top-1.5 h-1 w-14 rounded-t bg-slate-500"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute right-5 -top-1.5 h-1 w-8 rounded-t bg-slate-500"
+        aria-hidden="true"
+      />
       <div className="rounded-[34px] border-[9px] border-slate-950 bg-slate-950 p-2 shadow-[0_30px_90px_rgba(15,23,42,0.18)]">
-        <div className="relative overflow-hidden rounded-[24px] bg-white p-4">
+        <div className="relative flex min-h-[520px] flex-col overflow-hidden rounded-[24px] bg-white p-4">
           <div
-            className="absolute left-1/2 top-1.5 h-2 w-2 -translate-x-1/2 rounded-full bg-slate-800"
+            className="absolute right-1.5 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-slate-800"
             aria-hidden="true"
           />
           {children}
+          <div
+            className="mx-auto mt-4 h-1.5 w-32 rounded-full bg-slate-400/45"
+            aria-hidden="true"
+          />
         </div>
       </div>
     </div>

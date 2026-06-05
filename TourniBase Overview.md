@@ -62,12 +62,12 @@ TourniBase is trying to become the standardized admission infrastructure layer f
 
 - Role-first homepage with a concise hero, centered header navigation, contact email shortcut, refined audience card copy for each role, aligned card text/buttons, bold role buttons, and progressive disclosure
 - Dedicated audience pages for tournament directors, parents/spectators, and coaches with role-specific benefits, mockups, and stronger signup prompts
-- Trial device framing is active: the director and coach dashboards are both shown inside iPad Pro-style frames, while keeping the existing dashboard content
+- Trial device framing is active: the director and coach dashboards are both shown inside iPad Pro-style frames with top-edge volume/power controls and bottom home indicators, while keeping the existing dashboard content
 - Coach mockup shows clearer roster states for checked in, pass-ready, and not-registered players
 - Coach page stats use clearer readiness copy with "for arrival"
 - Parent page stats emphasize a unified payment processor
 - Parent page uses a realistic iPhone-style pass mockup with TourniBase branding, paid status, entrance info, a less uniform QR-style code, a cleaner single Next pass row, and a muted iPhone-style home indicator shifted farther down near the bottom of the phone screen
-- Parent phone mockup uses a visibly larger scaled TourniBase logo lockup aligned near the left edge of the pass card, tuned status-bar positioning with a larger time, iOS-style cell/battery indicators, and a smaller static bell notification icon
+- Parent phone mockup uses a visibly larger scaled TourniBase logo lockup aligned near the left edge of the pass card, tuned status-bar positioning with a larger time, iOS-style cell/battery indicators, corrected side buttons, and a smaller static bell notification icon
 - Parent phone mockup action rows use clearer spacing below the pass details, with the phone header and pass stack shifted up to give the bottom actions more room
 - Parent phone mockup uses John Smith as the sample pass holder
 - Waitlist forms require email, name, and organization/team, with directors using an Organization-only label
