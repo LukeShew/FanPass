@@ -191,8 +191,12 @@ function ParentPassMockup() {
 
               <div className="mt-3 overflow-hidden rounded-xl border border-tournibase-border bg-white">
                 <PassActionRow label="Next pass" />
-                <PassActionRow label="Back to home" />
               </div>
+
+              <div
+                className="mx-auto mt-3 h-1.5 w-28 rounded-full bg-tournibase-navy"
+                aria-hidden="true"
+              />
             </div>
           </div>
         </div>
