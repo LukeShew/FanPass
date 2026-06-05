@@ -189,12 +189,12 @@ function ParentPassMockup() {
                 <PhoneInfoTile label="Entrance" value="South doors" />
               </div>
 
-              <div className="mt-3 overflow-hidden rounded-xl border border-tournibase-border bg-white">
+              <div className="mt-3 rounded-xl border border-tournibase-border bg-white shadow-sm">
                 <PassActionRow label="Next pass" />
               </div>
 
               <div
-                className="mx-auto mt-6 h-1.5 w-28 translate-y-1 rounded-full bg-slate-400/45"
+                className="mx-auto mt-6 h-1.5 w-28 translate-y-2 rounded-full bg-slate-400/45"
                 aria-hidden="true"
               />
             </div>
@@ -220,8 +220,11 @@ function PhoneInfoTile({ label, value }: { label: string; value: string }) {
 
 function PassActionRow({ label }: { label: string }) {
   return (
-    <div className="border-t border-tournibase-border px-4 py-3.5 first:border-t-0">
+    <div className="flex items-center justify-between px-4 py-3.5">
       <p className="text-sm font-semibold text-tournibase-navy">{label}</p>
+      <span aria-hidden="true" className="text-sm font-bold text-slate-400">
+        ›
+      </span>
     </div>
   );
 }
