@@ -121,10 +121,9 @@ function ParentPassMockup() {
                   />
                 </div>
 
-                <button
+                <div
                   className="grid h-9 w-9 place-items-center rounded-full text-tournibase-navy"
-                  aria-label="Notifications"
-                  type="button"
+                  aria-hidden="true"
                 >
                   <svg
                     aria-hidden="true"
@@ -147,7 +146,7 @@ function ParentPassMockup() {
                       strokeWidth="2"
                     />
                   </svg>
-                </button>
+                </div>
               </div>
 
               <div className="rounded-2xl bg-tournibase-blue p-5 text-white shadow-[0_18px_45px_rgba(37,99,235,0.28)]">
