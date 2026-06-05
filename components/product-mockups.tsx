@@ -194,7 +194,7 @@ function ParentPassMockup() {
               </div>
 
               <div
-                className="mx-auto mt-4 h-1.5 w-28 rounded-full bg-slate-400/45"
+                className="mx-auto mt-8 h-1.5 w-28 rounded-full bg-slate-400/45"
                 aria-hidden="true"
               />
             </div>
